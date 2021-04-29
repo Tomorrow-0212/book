@@ -23,6 +23,7 @@ public class BookManagerServlet extends BaseServlet {
      * @throws IOException
      */
     protected void getAllBooks(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("测试Git的使用");
         List<Book> booksList = bookService.getAllBooks();
         request.setAttribute("booksList",booksList);
         request.getRequestDispatcher("/pages/manager/book_manager.jsp").forward(request,response);
